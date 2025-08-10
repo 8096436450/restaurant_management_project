@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Menu</title>
+    </head>
+<body>
+    <nav>
+        <a href="{% url 'home' %}">Home</a> |
+        <a href="{% url 'about' %}">About Us</a>
+        <a href="{% url 'menu' %}">Menu</a>
+    </nav>
+    <h1>Our Menu</h1>
+    <ul>
+        {% for item in menu_items %}
+        <li>{{ item.name }} - ${{ item.price }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
