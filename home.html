@@ -1,15 +1,49 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{{ restaurant }}</title>
-    </head>
-    <body>
-        <nav>
-            <a href="{% url 'home' %}">Home</a>
-            <a href="{% url 'about' %)">About Us</a>
-            <a href="{{% url 'menut' %">Menu</a>
-        </nav>
+        <title>{{ restaurant_name }}<title>
+            <style>
+                body{
+                font-family: Arial, sans-serif;
+                background-color: #fafafa;
+                color: #333;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                }
 
-        <h1>Welcome to {{ reestaurant_name }}</h1>
-    </body>
+                nav{
+                background-color: #333;
+                padding: 10px;
+                }
+
+                nav a{
+                color: white;
+                text-decoration: none;
+                margin: 0 15px;
+                font-weight: bold;
+                }
+
+                nav a:hover{
+                margin-top: 50px;
+                font-size: 2.5em;
+                color: #444;
+                }
+
+                p{
+                font-size: 1.1em;
+                color: #666;
+                }
+                </style>
+                </head>
+                <body>
+                    <nav>
+                        <a href="{% url 'home' %}">Home</a>
+                        <a href="{% url 'about'%}">About Us</a>
+                        <a href="{% url 'menu' %}">Menu</a>
+                    </nav>
+
+                    <h1>Welcome to {{ restaurant_name }}</h1>
+                    <p>Enjoy the finest dishes in town,made with love and the freshest ingredients.</p>
+                </body>
 </html>
